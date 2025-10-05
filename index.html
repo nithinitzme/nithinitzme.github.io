@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nithin Raveendran — Quantum Computing Researcher</title>
+  <meta name="description" content="Assistant Research Professor at the University of Arizona. Quantum error correction, quantum LDPC codes, iterative decoding.">
+  <meta name="author" content="Nithin Raveendran">
+  <meta property="og:title" content="Nithin Raveendran" />
+  <meta property="og:description" content="Quantum error correction • Quantum LDPC codes • Iterative decoding" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/og-image.png" />
+  <meta name="theme-color" content="#0b1020" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0b1020;          /* deep navy */
+      --panel: #0f172a;       /* slate-900 */
+      --muted: #a5b4fc;       /* indigo-300 */
+      --text: #e2e8f0;        /* slate-200 */
+      --subtext: #94a3b8;     /* slate-400 */
+      --accent1: #06b6d4;     /* cyan-500 */
+      --accent2: #7c3aed;     /* violet-600 */
+      --accent3: #22c55e;     /* green-500 */
+      --ring: rgba(124,58,237,.35);
+      --card: #0f172a;        
+      --border: #1f2937;      
+      --link: #67e8f9;        
+      --code: #0b1220;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background: radial-gradient(900px 600px at 85% -120px, rgba(124,58,237,.18), transparent 60%),
+                  radial-gradient(750px 500px at -10% 10%, rgba(6,182,212,.15), transparent 60%),
+                  var(--bg);
+      line-height:1.65;
+    }
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:900px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;backdrop-filter:saturate(180%) blur(10px);background:linear-gradient(to bottom, rgba(11,16,32,.8), rgba(11,16,32,.35));border-bottom:1px solid var(--border);z-index:50}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .qubit{width:18px;height:18px;display:inline-grid;place-items:center;border-radius:6px;background:linear-gradient(135deg, var(--accent2), var(--accent1));box-shadow:0 0 18px rgba(124,58,237,.35)}
+    .qubit svg{width:14px;height:14px;opacity:.9}
+    .navlinks{display:flex;gap:18px}
+    .navlinks a{color:var(--text);opacity:.9}
+    .navlinks a:hover{opacity:1}
+    .menu{display:none}
+    @media(max-width:720px){.navlinks{display:none}.menu{display:inline-flex}}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(180deg,#0b1020,#0f172a);color:var(--text)}
+
+    main{padding:38px 0 0}
+    section{padding:38px 0;border-top:1px solid var(--border)}
+    section:first-of-type{border-top:none}
+    h1{font-size:clamp(32px,6vw,52px);line-height:1.1;margin:0 0 10px}
+    h2{font-size:clamp(20px,3.6vw,28px);margin:0 0 14px}
+    h3{margin:0 0 8px}
+    p{margin:0 0 12px}
+    .lede{color:var(--subtext);max-width:720px}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid var(--border);border-radius:9999px;background:#0b1220;font-size:12px;margin-bottom:12px}
+    .mono{font-family:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+    .col-6{grid-column:span 6}
+    .col-12{grid-column:span 12}
+    @media(max-width:900px){.grid{grid-template-columns:repeat(6,1fr)}.col-6,.col-12{grid-column:span 6}}
+
+    .card{border:1px solid var(--border);background:linear-gradient(180deg,#0c1326,#0f172a);border-radius:16px;padding:18px}
+    .list{display:grid;gap:10px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{padding:4px 10px;border:1px solid var(--border);border-radius:9999px;background:#0b1220;font-size:12px}
+    .news li{margin-bottom:6px}
+    .pub li{margin-bottom:8px}
+    .muted{color:var(--subtext)}
+    footer{padding:32px 0;color:var(--subtext);border-top:1px solid var(--border);margin-top:38px}
+
+    /* timeline bullet */
+    .dot{display:inline-block;width:8px;height:8px;border-radius:9999px;background:linear-gradient(180deg,var(--accent1),var(--accent2));box-shadow:0 0 14px rgba(6,182,212,.35);margin-right:8px}
+      /* headshot */
+    .hero-wrap{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:center}
+    .headshot{width:120px;height:120px;border-radius:9999px;object-fit:cover;border:2px solid var(--border);box-shadow:0 0 24px rgba(124,58,237,.25)}
+    @media(max-width:560px){.hero-wrap{grid-template-columns:1fr}.hero-wrap img{justify-self:start}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <span class="qubit" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12c0-4.418 3.582-8 8-8m0 16c-4.418 0-8-3.582-8-8m16 0c0 4.418-3.582 8-8 8m0-16c4.418 0 8 3.582 8 8M3 12h18" stroke="white" stroke-width="1.2" stroke-linecap="round" opacity=".6"/></svg>
+          </span>
+          <span>Nithin Raveendran</span>
+        </div>
+        <div class="navlinks" id="navlinks">
+          <a href="#about">About</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#talks">Talks</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="btn menu" id="menuBtn" aria-label="Toggle Menu">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section>
+      <div class="hero-wrap">
+        <img class="headshot" src="assets/nithin.jpg" alt="Portrait of Nithin Raveendran"/>
+        <div>
+          <span class="pill mono">Assistant Research Professor • University of Arizona • Quantum Error Correction</span>
+          <h1>Quantum computing researcher building better <span class="mono">QLDPC</span> codes and decoders.</h1>
+          <p class="lede">I focus on quantum error correction, with an emphasis on improved quantum LDPC codes and iterative decoders for fault‑tolerant quantum computing.</p>
+          <p class="muted">Based in Tucson, AZ • Open to collaborations in quantum error correction, coding theory, and fault tolerance.</p>
+        </div>
+      </div>
+    </section>
+      <span class="pill mono">Assistant Research Professor • University of Arizona • Quantum Error Correction</span>
+      <h1>Quantum computing researcher building better <span class="mono">QLDPC</span> codes and decoders.</h1>
+      <p class="lede">I focus on quantum error correction, with an emphasis on improved quantum LDPC codes and iterative decoders for fault‑tolerant quantum computing.</p>
+      <p class="muted">Based in Tucson, AZ • Open to collaborations in quantum error correction, coding theory, and fault tolerance.</p>
+    </section>
+
+    <!-- ABOUT + HIGHLIGHTS -->
+    <section id="about">
+      <h2>About</h2>
+      <div class="grid">
+        <div class="col-12">
+          <div class="card">
+            <p>
+              I am an Assistant Research Professor in the Department of Electrical and Computer Engineering at the University of Arizona. My work spans quantum error correction and fault‑tolerant quantum computation, with contributions to trapping‑set analysis in (Q)LDPC codes, soft‑syndrome and flipping decoders, and hardware‑aware low‑latency architectures. I co‑lead NSF‑funded research on scalable QLDPC decoding and mentor graduate researchers across software and FPGA implementation tracks.
+            </p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card tags">
+            <span class="tag">Quantum error correction</span>
+            <span class="tag">Quantum LDPC codes</span>
+            <span class="tag">Iterative decoding</span>
+            <span class="tag">Fault‑tolerant computing</span>
+            <span class="tag">Trapping sets</span>
+            <span class="tag">Quantum networking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS + NEWS -->
+    <section id="research">
+      <h2>Research</h2>
+      <div class="grid">
+        <div class="col-6">
+          <div class="card">
+            <h3>Interests</h3>
+            <ul>
+              <li>Quantum error correction codes and relations with classical error correction</li>
+              <li>Fault‑tolerant quantum computing systems</li>
+              <li>Iterative decoding algorithms and their optimization</li>
+              <li>Trapping sets analysis in classical and quantum LDPC codes</li>
+              <li>Learning‑based inference for quantum systems</li>
+              <li>Quantum communication & networking protocols</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <h3>Recent News</h3>
+            <ul class="news">
+              <li><span class="dot"></span>Co‑PI on NSF CISE‑CCF grant #2420424 (2024–2027): scalable quantum LDPC decoders.</li>
+              <li><span class="dot"></span>Nature Physics paper on constant‑overhead fault‑tolerant quantum computation with atom arrays (2024).</li>
+              <li><span class="dot"></span>Best Paper Award at IEEE QCE 2024 for non‑binary hypergraph‑product codes (qudit QEC).</li>
+              <li><span class="dot"></span>Ph.D. student work on collective bit‑flipping/Min‑Sum decoding accepted to IEEE TCOMM/ISIT.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS (short list linking out) -->
+    <section id="publications">
+      <h2>Selected Publications</h2>
+      <div class="card">
+        <p class="muted">Full list on <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+        <ul class="pub">
+          <li><strong>Constant‑overhead fault‑tolerant quantum computation with reconfigurable atom arrays</strong> — <em>Nature Physics</em>, 2024. (with Q. Xu, J. P. Bonilla Ataides, C. A. Pattison, <em>et al.</em>)</li>
+          <li><strong>Soft‑syndrome iterative decoding of quantum LDPC codes and hardware architectures</strong> — <em>EPJ Quantum Technology</em>, 2023. (with J. Valls, A. Pradhan, <em>et al.</em>)</li>
+          <li><strong>Trapping Sets of Quantum LDPC Codes</strong> — <em>Quantum</em>, 2021. (with B. Vasić)</li>
+          <li><strong>Low‑latency flipping decoders for improving error floor performance in quantum LDPC codes</strong> — <em>ISTC</em> 2023.</li>
+          <li><strong>Sub‑graph expansion‑contraction method for error‑floor computation</strong> — <em>IEEE Trans. on Communications</em>, 2020.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TALKS -->
+    <section id="talks">
+      <h2>Talks</h2>
+      <div class="card list">
+        <div><strong>On the Minimum Distance of Lifted Product LDPC Codes</strong> — Invited workshop talk, ITA 2025, San Diego, CA.</div>
+        <div><strong>Quantum Trapping Sets and Their Impact on QLDPC Decoding</strong> — QUIK Workshop, Athens, 2024 (invited + panel).</div>
+        <div><strong>Concatenated QLDPC Codes and Decoders</strong> — Invited workshop talk, ITA 2024, San Diego, CA.</div>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <div class="card list">
+        <div><strong>Teaching experience 1</strong> — Undergraduate course, University 1, 2014.</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Best way to reach me is by email. If you prefer, send a short note below and I'll get back to you.</p>
+        <form class="grid" onsubmit="event.preventDefault(); alert('Thanks! Replace action with your form endpoint (e.g. Formspree).');" action="#" method="POST">
+          <div class="col-6"><input aria-label="Your name" name="name" required placeholder="Your name" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"/></div>
+          <div class="col-6"><input aria-label="Your email" name="email" type="email" required placeholder="Your email" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"/></div>
+          <div class="col-12"><textarea aria-label="Message" name="message" required placeholder="Message" rows="5" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"></textarea></div>
+          <div class="col-12"><button class="btn" type="submit">Send</button></div>
+        </form>
+        <p class="muted" style="margin-top:10px">Also on <a href="https://github.com/nithinitzme" target="_blank" rel="noopener">GitHub</a> • <a href="#" id="emailLink">Email</a> • <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap">
+        <span>© <span id="year"></span> Nithin Raveendran</span>
+        <span class="muted">Built with ❤️ and GitHub Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const navlinks = document.getElementById('navlinks');
+    menuBtn?.addEventListener('click', () => navlinks.style.display = navlinks.style.display === 'flex' ? 'none' : 'flex');
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Protect email from scrapers: set at runtime if provided
+    // Replace below with your address (e.g., 'nithin@arizona.edu')
+    const EMAIL = 'nithin@arizona.edu';
+    const link = document.getElementById('emailLink');
+    if(EMAIL && link){ link.href = `mailto:${EMAIL}`; link.textContent = EMAIL; }
+  </script>
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nithin Raveendran",
+    "jobTitle": "Assistant Research Professor",
+    "affiliation": {"@type": "CollegeOrUniversity", "name": "University of Arizona"},
+    "knowsAbout": [
+      "Quantum error correction",
+      "Quantum LDPC codes",
+      "Iterative decoding",
+      "Fault-tolerant quantum computing"
+    ],
+    "sameAs": [
+      "https://github.com/nithinitzme",
+      "https://scholar.google.com"
+    ]
+  }
+  </script>
+</body>
+</html>
