@@ -95,8 +95,21 @@
     <div class="container">
       <nav>
         <div class="brand">
-          <span class="qubit" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12c0-4.418 3.582-8 8-8m0 16c-4.418 0-8-3.582-8-8m16 0c0 4.418-3.582 8-8 8m0-16c4.418 0 8 3.582 8 8M3 12h18" stroke="white" stroke-width="1.2" stroke-linecap="round" opacity=".6"/></svg>
+          <span class="qubit" aria-hidden="true" title="QLDPC motif">
+            <!-- QLDPC-inspired icon: variable/check nodes with edges -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g fill="none" stroke="white" stroke-width="1.2" opacity=".9" stroke-linecap="round">
+                <!-- variable nodes (circles) -->
+                <circle cx="6" cy="6" r="2"/>
+                <circle cx="18" cy="6" r="2"/>
+                <circle cx="6" cy="18" r="2"/>
+                <circle cx="18" cy="18" r="2"/>
+                <!-- check nodes (squares) -->
+                <rect x="10.5" y="10.5" width="3" height="3" rx="0.6"/>
+                <!-- edges -->
+                <path d="M8 6h8M6 8v8M18 8v8M8 18h8" opacity=".7"/>
+              </g>
+            </svg>
           </span>
           <span>Nithin Raveendran</span>
         </div>
@@ -107,6 +120,7 @@
           <a href="#talks">Talks</a>
           <a href="#teaching">Teaching</a>
           <a href="#contact">Contact</a>
+          <a class="btn" href="assets/Nithin_Raveendran_CV.pdf" target="_blank" rel="noopener">Download CV</a>
         </div>
         <button class="btn menu" id="menuBtn" aria-label="Toggle Menu">☰</button>
       </nav>
@@ -122,7 +136,7 @@
           <span class="pill mono">Assistant Research Professor • University of Arizona • Quantum Error Correction</span>
           <h1>Quantum computing researcher building better <span class="mono">QLDPC</span> codes and decoders.</h1>
           <p class="lede">I focus on quantum error correction, with an emphasis on improved quantum LDPC codes and iterative decoders for fault‑tolerant quantum computing.</p>
-          <p class="muted">Based in Tucson, AZ • Open to collaborations in quantum error correction, coding theory, and fault tolerance.</p>
+          <p class="muted">Based in Tucson, AZ • Open to collaborations in quantum error correction, coding theory, and fault tolerance. <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar →</a></p>
         </div>
       </div>
     </section>
@@ -189,16 +203,29 @@
 
     <!-- PUBLICATIONS (short list linking out) -->
     <section id="publications">
-      <h2>Selected Publications</h2>
+      <h2>Publications</h2>
       <div class="card">
-        <p class="muted">Full list on <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+        <h3>Journals</h3>
         <ul class="pub">
-          <li><strong>Constant‑overhead fault‑tolerant quantum computation with reconfigurable atom arrays</strong> — <em>Nature Physics</em>, 2024. (with Q. Xu, J. P. Bonilla Ataides, C. A. Pattison, <em>et al.</em>)</li>
-          <li><strong>Soft‑syndrome iterative decoding of quantum LDPC codes and hardware architectures</strong> — <em>EPJ Quantum Technology</em>, 2023. (with J. Valls, A. Pradhan, <em>et al.</em>)</li>
-          <li><strong>Trapping Sets of Quantum LDPC Codes</strong> — <em>Quantum</em>, 2021. (with B. Vasić)</li>
-          <li><strong>Low‑latency flipping decoders for improving error floor performance in quantum LDPC codes</strong> — <em>ISTC</em> 2023.</li>
-          <li><strong>Sub‑graph expansion‑contraction method for error‑floor computation</strong> — <em>IEEE Trans. on Communications</em>, 2020.</li>
+          <li><strong>Constant‑overhead fault‑tolerant quantum computation with reconfigurable atom arrays</strong> — <em>Nature Physics</em>, 2024. (Q. Xu, J. P. Bonilla Ataides, C. A. Pattison, <u>N. Raveendran</u>, D. Bluvstein, J. Wurtz, B. Vasić, M. D. Lukin, L. Jiang, H. Zhou)</li>
+          <li><strong>Soft‑syndrome iterative decoding of quantum LDPC codes and hardware architectures</strong> — <em>EPJ Quantum Technology</em> 10:45, 2023. (J. Valls, A. Pradhan, N. Rengaswamy, F. Garcia‑Herrero, <u>N. R.</u>, B. Vasić)</li>
+          <li><strong>Trapping Sets of Quantum LDPC Codes</strong> — <em>Quantum</em> 5:562, 2021. (<u>N. R.</u>, B. Vasić)</li>
+          <li><strong>Entanglement purification with quantum LDPC codes and iterative decoding</strong> — <em>Quantum</em>, 2024. (N. Rengaswamy, <u>N. R.</u>, A. Raina, B. Vasić)</li>
+          <li><strong>A Sub‑Graph Expansion‑Contraction Method for Error Floor Computation</strong> — <em>IEEE Transactions on Communications</em> 68(7):3894–3995, 2020. (<u>N. R.</u>, D. Declercq, B. Vasić)</li>
         </ul>
+        <h3>Conferences</h3>
+        <ul class="pub">
+          <li><strong>Non‑Binary Hypergraph‑Product Codes for Qudit Error Correction</strong> — <em>IEEE QCE</em> 2024 (Best Paper). (S. K. Borah, A. K. Pradhan, <u>N. R.</u>, N. Rengaswamy, B. Vasić)</li>
+          <li><strong>Quaternary‑binary message‑passing decoder for quantum LDPC codes</strong> — <em>IEEE Globecom</em> 2023. (D. Chytas, <u>N. R.</u>, A. Pradhan, B. Vasić)</li>
+          <li><strong>Low‑latency flipping decoders for improving error floor performance in quantum LDPC codes</strong> — <em>ISTC</em> 2023. (<u>N. R.</u>, et al.)</li>
+          <li><strong>FAID diversity via neural networks</strong> — <em>ISTC</em> 2021. (X. Xiao, <u>N. R.</u>, B. Vasić, S. Lin, R. Tandon)</li>
+          <li><strong>Generalized Belief Propagation Decoding for Quantum LDPC Codes</strong> — <em>ICC</em> 2019. (<u>N. R.</u>, M. Bahrami, B. Vasić)</li>
+        </ul>
+        <h3>Preprints & In‑press</h3>
+        <ul class="pub">
+          <li><strong>Collective bit‑flipping‑based decoding of quantum LDPC codes</strong> — <em>IEEE Transactions on Communications</em>, accepted 2024; arXiv:2406.17070. (D. Chytas, <u>N. R.</u>, B. Vasić)</li>
+        </ul>
+        <p class="muted">Full list and bibtex on <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
       </div>
     </section>
 
@@ -244,6 +271,8 @@
       </div>
     </div>
   </footer>
+
+<!-- Download CV note: place your PDF at assets/Nithin_Raveendran_CV.pdf -->
 
   <script>
     // Mobile menu toggle
