@@ -118,12 +118,12 @@
           </span>
           <span>Nithin Raveendran</span>
         </div>
-        <div class="navlinks" id="navlinks">
-          <a href="#about">About</a>
-          <a href="#publications">Publications</a>
-          <a href="#talks">Talks</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#contact">Contact</a>
+        <div class="navlinks" id="navlinks" style="display:flex;gap:10px;align-items:center">
+          <a class="btn" href="#about">About</a>
+          <a class="btn" href="#publications">Publications</a>
+          <a class="btn" href="#talks">Talks</a>
+          <a class="btn" href="#teaching">Teaching</a>
+          <a class="btn" href="#contact">Contact</a>
           <a class="btn" id="cvLink" href="assets/nithin_cv.pdf" target="_blank" rel="noopener" title="Download CV">Download CV</a>
         </div>
         <button class="btn menu" id="menuBtn" aria-label="Toggle Menu">☰</button>
@@ -137,7 +137,11 @@
       <div class="hero-wrap">
         <img class="headshot" src="assets/nithin.jpg" alt="Portrait of Nithin Raveendran"/>
         <div>
-          <span class="pill mono">Assistant Research Professor • University of Arizona • Quantum Error Correction</span>
+            <span class="pill mono">
+            <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/nithin-raveendran" target="_blank" rel="noopener">Assistant Research Professor</a> • 
+            <a href="https://www.arizona.edu/" target="_blank" rel="noopener">University of Arizona</a> • 
+            Quantum Error Correction
+            </span>
           <h1>Quantum computing researcher building better <span class="mono">QLDPC</span> codes and decoders.</h1>
           <p class="lede">I focus on quantum error correction, with an emphasis on improved quantum LDPC codes and iterative decoders for fault-tolerant quantum computing.</p>
           <p class="muted">Based in Tucson, AZ • Open to collaborations in quantum error correction, coding theory, and fault tolerance. <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar →</a></p>
@@ -148,25 +152,57 @@
     <section id="about">
       <h2>About</h2>
       <div class="grid">
-        <div class="col-12">
-          <div class="card">
-            <p>
-              Assistant Research Professor in the Department of Electrical and Computer Engineering at the University of Arizona. My work spans quantum error correction and fault-tolerant quantum computation, with contributions to trapping-set analysis in Quantum LDPC codes, soft-syndrome iterative decoders, and their hardware-aware low-latency architectures. I co-lead NSF-funded research on scalable QLDPC decoding and mentor graduate researchers across software and FPGA implementation tracks.
-            </p>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="card tags">
-            <span class="tag">Quantum error correction</span>
-            <span class="tag">Quantum LDPC codes</span>
-            <span class="tag">Iterative decoding</span>
-            <span class="tag">Fault-tolerant computing</span>
-            <span class="tag">Trapping sets</span>
-            <span class="tag">Quantum networking</span>
-            <span class="tag">Classical error correction</span>
-          </div>
+      <div class="col-12">
+        <div class="card">
+        <ul style="margin:0;padding-left:20px">
+          <li>
+          <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/nithin-raveendran" target="_blank" rel="noopener">Assistant Research Professor</a> in Electrical and Computer Engineering, University of Arizona.
+          </li>
+          <li>
+          Co-leads NSF-funded research on scalable Quantum LDPC codes and decoders.
+          </li>
+          <li>
+          Mentors graduate, undergraduate and high-school researchers in quantum error correction theory and software.
+          </li>
+          <li>
+          Core Research Areas:
+          <ul>
+            <li>Fault-tolerant quantum computation (<a href="https://www.nature.com/articles/s41567-024-02479-z" target="_blank" rel="noopener">Constant-overhead with QLDPC codes and reconfigurable neutral atoms</a>)</li>
+            <li>Trapping-set analysis in Quantum LDPC codes (<a href="https://quantum-journal.org/papers/q-2021-10-14-562/" target="_blank" rel="noopener">Pioneering study to improve iterative decoders</a>)</li>
+            <li>Soft-syndrome iterative decoders (<a href="https://epjquantumtechnology.springeropen.com/articles/10.1140/epjqt/s40507-023-00201-1" target="_blank" rel="noopener"></a>)</li>
+            <li>Hardware-aware low-latency architectures (<a href="https://arxiv.org/abs/2406.17070" target="_blank" rel="noopener"></a>)</li>
+          </ul>
+          </li>
+        </ul>
         </div>
       </div>
+      <div class="col-12">
+        <div class="card tags">
+        <a class="tag" href="https://arxiv.org/pdf/quant-ph/9512032" target="_blank" rel="noopener" title="Quantum error correction">Quantum error correction</a>
+        <a class="tag" href="https://errorcorrectionzoo.org/list/qldpc" target="_blank" rel="noopener" title="Quantum LDPC codes">Quantum LDPC codes</a>
+        <a class="tag" href="https://www.itsoc.org/european-school-2013/program/01_esit_ohrid_2013_introduction_short_v10.pdf" target="_blank" rel="noopener" title="Iterative decoding">Iterative decoding</a>
+        <a class="tag" href="https://arxiv.org/search/?query=fault-tolerant+quantum+computing&searchtype=all" target="_blank" rel="noopener" title="Fault-tolerant computing">Fault-tolerant computing</a>
+        <a class="tag" href="https://quantum-journal.org/papers/q-2021-10-14-562/" target="_blank" rel="noopener" title="Trapping sets">Trapping sets</a>
+        <a class="tag" href=https://cqn-erc.arizona.edu/ target="_blank" rel="noopener" title="Quantum networking">Quantum networking</a>
+        <a class="tag" href="https://errorcorrectionzoo.org/" target="_blank" rel="noopener" title="Classical error correction">Classical error correction</a>
+        </div>
+      </div>
+      </div>
+      <style>
+      .tags .tag {
+        transition: background 0.2s, color 0.2s;
+        cursor: pointer;
+      }
+      .tags .tag:hover {
+        background: var(--accent2);
+        color: #fff;
+        text-decoration: underline;
+      }
+      </style>
+      <script>
+      // Open tag links in new tab on click (already set by target="_blank")
+      // Optionally, you can add more JS for analytics or effects if needed
+      </script>
     </section>
 
     <!-- RESEARCH INTERESTS + NEWS -->
@@ -250,14 +286,22 @@
     <section id="contact">
       <h2>Contact</h2>
       <div class="card">
-        <p>Best way to reach me is by email. If you prefer, send a short note below and I'll get back to you.</p>
-        <form class="grid" onsubmit="event.preventDefault(); alert('Thanks! Replace action with your form endpoint (e.g. Formspree).');" action="#" method="POST">
-          <div class="col-6"><input aria-label="Your name" name="name" required placeholder="Your name" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"/></div>
-          <div class="col-6"><input aria-label="Your email" name="email" type="email" required placeholder="Your email" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"/></div>
-          <div class="col-12"><textarea aria-label="Message" name="message" required placeholder="Message" rows="5" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"></textarea></div>
-          <div class="col-12"><button class="btn" type="submit">Send</button></div>
-        </form>
-        <p class="muted" style="margin-top:10px">Also on <a href="https://github.com/nithinitzme" target="_blank" rel="noopener">GitHub</a> • <a href="#" id="emailLink">Email</a> • <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></p>
+      <p>Best way to reach me is by email. Or, send a note below and I'll get back to you.</p>
+      <form class="grid" action="https://formspree.io/f/xwkzjzqg" method="POST">
+        <div class="col-6">
+        <input aria-label="Your name" name="name" required placeholder="Your name" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"/>
+        </div>
+        <div class="col-6">
+        <input aria-label="Your email" name="email" type="email" required placeholder="Your email" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"/>
+        </div>
+        <div class="col-12">
+        <textarea aria-label="Message" name="message" required placeholder="Message" rows="5" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"></textarea>
+        </div>
+        <div class="col-12">
+        <button class="btn" type="submit">Send</button>
+        </div>
+      </form>
+      <p class="muted" style="margin-top:10px">Also on <a href="https://github.com/nithinitzme" target="_blank" rel="noopener">GitHub</a> • <a href="#" id="emailLink">Email</a> • <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></p>
       </div>
     </section>
   </main>
