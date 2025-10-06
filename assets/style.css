@@ -1,0 +1,561 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================= */
+/*          THEME COLORS         */
+/* ============================= */
+:root {
+  --bg: #0b1020;
+  --panel: #0f172a;
+  --card: #0f172a;
+  --pill-bg: #0b1220;
+  --tag-bg: #0b1220;
+  --text: #e2e8f0;
+  --subtext: #94a3b8;
+  --border: #1f2937;
+  --link: #67e8f9;
+  --accent1: #06b6d4;
+  --accent2: #7c3aed;
+  --accent3: #22c55e;
+  --ring: rgba(124,58,237,.35);
+}
+
+html.light-mode {
+  --bg: #f9fafb;
+  --panel: #ffffff;
+  --card: #ffffff;
+  --pill-bg: #f3f4f6;
+  --tag-bg: #eef2ff;
+  --text: #1f2937;
+  --subtext: #4b5563;
+  --border: #e5e7eb;
+  --link: #2563eb;
+}
+/* ============================= */
+/*            GLOBAL             */
+/* ============================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ============================= */
+/*           HEADER              */
+/* ============================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.brand:hover {
+  text-decoration: none;
+  opacity: 0.9;
+}
+
+.qubit {
+  width: 18px;
+  height: 18px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent1));
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.35);
+}
+
+.navlinks {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.navlinks a {
+  position: relative;
+  padding: 6px 4px;
+  transition: color 0.2s;
+  color: var(--text);
+}
+
+.navlinks a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent2);
+  border-radius: 1px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 720px) {
+  .navlinks {
+    display: none;
+    flex-direction: column;
+    background: var(--panel);
+    position: absolute;
+    top: 64px;
+    right: 20px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+
+  .navlinks.active {
+    display: flex;
+  }
+
+  .menu {
+    display: inline-flex;
+  }
+}
+
+/* ============================= */
+/*            BUTTONS            */
+/* ============================= */
+.btn {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 12px;
+  padding: 8px 12px;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--accent2);
+  color: #fff;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent2);
+  box-shadow: 0 0 0 4px var(--ring);
+}
+
+.btn.small {
+  font-size: 0.9rem;
+  padding: 6px 10px;
+}
+
+/* ============================= */
+/*             HERO              */
+/* ============================= */
+.hero-wrap {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.headshot {
+  width: 180px;
+  height: 180px;
+  border-radius: 9999px;
+  object-fit: cover;
+  border: 3px solid var(--border);
+  box-shadow: 0 0 28px var(--ring);
+  transition: filter 0.3s;
+}
+
+html.light-mode .headshot {
+  filter: brightness(1);
+}
+
+html:not(.light-mode) .headshot {
+  filter: brightness(0.95);
+}
+
+@media (max-width: 560px) {
+  .hero-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================= */
+/*           SECTIONS            */
+/* ============================= */
+section {
+  padding: 38px 0;
+  border-top: 1px solid var(--border);
+}
+
+section:first-of-type {
+  border-top: none;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 52px);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(20px, 3.6vw, 28px);
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+/* ============================= */
+/*           CARDS               */
+/* ============================= */
+.card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 16px;
+  padding: 18px;
+  color: var(--text);
+}
+
+/* grid system */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 18px;
+}
+
+.col-6 {
+  grid-column: span 6;
+}
+
+.col-12 {
+  grid-column: span 12;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .col-6 {
+    grid-column: span 6;
+  }
+}
+/* ============================= */
+/*           MISC                */
+/* ============================= */
+.mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.muted {
+  color: var(--subtext);
+}
+
+/* ============================= */
+/*         PILL & TAGS           */
+/* ============================= */
+.pill,
+.tag {
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  color: var(--text);
+  background: var(--pill-bg);
+  padding: 6px 10px;
+}
+
+/* Pill: for the hero section label */
+.pill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: normal;
+  max-width: 100%;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Tag container (auto wraps) */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Individual tag */
+.tag {
+  font-size: 12px;
+  background: var(--tag-bg);
+  transition: background 0.2s, color 0.2s;
+}
+
+.tag:hover {
+  background: var(--accent2);
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ============================= */
+/*      RESEARCH / NEWS LISTS    */
+/* ============================= */
+.news {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Each list item: dot + paragraph-style text */
+.news li {
+  display: flex;
+  align-items: baseline; /* aligns dot with first text line */
+  gap: 10px;
+  margin-bottom: 10px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* Dot styling */
+.dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--accent1), var(--accent2));
+  margin-top: 5px;
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+  opacity: 0.95;
+  transition: opacity 0.3s ease;
+}
+
+/* Pulse animation when visible */
+.fade-in.visible .dot {
+  animation: dotPulse 1.2s ease-out both;
+}
+
+/* Natural inline wrapping for all text and links */
+.news li span,
+.news li a,
+.news li {
+  white-space: normal;
+  word-break: normal;
+}
+
+/* Inline link styling (appears like part of the sentence) */
+.news li a {
+  display: inline;
+  color: var(--link);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.news li a:hover {
+  text-decoration: underline;
+}
+
+/* Pulse animation definition */
+@keyframes dotPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+  }
+  40% {
+    transform: scale(1.4);
+    box-shadow: 0 0 18px rgba(6, 182, 212, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(124, 58, 237, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+  }
+}
+
+/* ============================= */
+/*       RECENT NEWS CARDS       */
+/* ============================= */
+.news li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+/* container inside each bullet */
+.news-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Link headline */
+.news-title {
+  font-weight: 600;
+  color: var(--link);
+  text-decoration: none;
+  font-size: 0.98rem;
+  transition: all 0.25s ease;
+}
+
+/* subtle gradient hover */
+.news-title:hover {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Description under link */
+.news-desc {
+  margin: 0;
+  color: var(--subtext);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* Dot alignment */
+.dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--accent1), var(--accent2));
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.4);
+  opacity: 0.95;
+}
+
+/* Pulse animation (already defined earlier) */
+.fade-in.visible .dot {
+  animation: dotPulse 1.2s ease-out both;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 560px) {
+  .pill {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+}
+
+/* ============================= */
+/*           VIDEO               */
+/* ============================= */
+video {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.25);
+  background: #000;
+}
+
+video::-webkit-media-controls-panel {
+  background-color: rgba(15, 23, 42, 0.75);
+  border-radius: 0 0 12px 12px;
+}
+
+@media (max-width: 560px) {
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* GIF as video element with fade-in */
+.gif-video {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 0 18px rgba(124, 58, 237, 0.25);
+  object-fit: cover;
+  background: #000;
+  transition: opacity 0.8s ease;
+}
+
+.gif-video.fade-in {
+  opacity: 0;
+}
+
+.fade-in.visible .gif-video {
+  opacity: 1;
+}
+
+
+/* ============================= */
+/*           FOOTER              */
+/* ============================= */
+.site-footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--border);
+  color: var(--subtext);
+  display: flex;
+  justify-content: center;
+  background: var(--panel);
+}
+
+/* ============================= */
+/*        ANIMATIONS             */
+/* ============================= */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
