@@ -57,6 +57,11 @@
     .menu{display:none}
     @media(max-width:720px){.navlinks{display:none}.menu{display:inline-flex}}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:linear-gradient(180deg,#0b1020,#0f172a);color:var(--text)}
+    .btn:focus {
+      outline: 2px solid var(--accent2);
+      outline-offset: 2px;
+      box-shadow: 0 0 0 4px var(--ring);
+    }
 
     main{padding:38px 0 0}
     section{padding:38px 0;border-top:1px solid var(--border)}
@@ -115,12 +120,12 @@
         </div>
         <div class="navlinks" id="navlinks">
           <a href="#about">About</a>
-          <a href="#research">Research</a>
+          <a id="cvLink" href="assets/Nithin_Raveendran_CV.pdf" target="_blank" rel="noopener" title="Download CV">Download CV</a>
           <a href="#publications">Publications</a>
           <a href="#talks">Talks</a>
           <a href="#teaching">Teaching</a>
           <a href="#contact">Contact</a>
-          <a class="btn" href="assets/Nithin_Raveendran_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+          <a class="btn" id="cvLink" href="assets/Nithin_Raveendran_CV.pdf" target="_blank" rel="noopener" title="Download CV">Download CV</a>
         </div>
         <button class="btn menu" id="menuBtn" aria-label="Toggle Menu">☰</button>
       </nav>
@@ -135,17 +140,11 @@
         <div>
           <span class="pill mono">Assistant Research Professor • University of Arizona • Quantum Error Correction</span>
           <h1>Quantum computing researcher building better <span class="mono">QLDPC</span> codes and decoders.</h1>
-          <p class="lede">I focus on quantum error correction, with an emphasis on improved quantum LDPC codes and iterative decoders for fault‑tolerant quantum computing.</p>
+          <p class="lede">I focus on quantum error correction, with an emphasis on improved quantum LDPC codes and iterative decoders for fault-tolerant quantum computing.</p>
           <p class="muted">Based in Tucson, AZ • Open to collaborations in quantum error correction, coding theory, and fault tolerance. <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar →</a></p>
         </div>
       </div>
     </section>
-      <span class="pill mono">Assistant Research Professor • University of Arizona • Quantum Error Correction</span>
-      <h1>Quantum computing researcher building better <span class="mono">QLDPC</span> codes and decoders.</h1>
-      <p class="lede">I focus on quantum error correction, with an emphasis on improved quantum LDPC codes and iterative decoders for fault‑tolerant quantum computing.</p>
-      <p class="muted">Based in Tucson, AZ • Open to collaborations in quantum error correction, coding theory, and fault tolerance.</p>
-    </section>
-
     <!-- ABOUT + HIGHLIGHTS -->
     <section id="about">
       <h2>About</h2>
@@ -153,7 +152,7 @@
         <div class="col-12">
           <div class="card">
             <p>
-              I am an Assistant Research Professor in the Department of Electrical and Computer Engineering at the University of Arizona. My work spans quantum error correction and fault‑tolerant quantum computation, with contributions to trapping‑set analysis in (Q)LDPC codes, soft‑syndrome and flipping decoders, and hardware‑aware low‑latency architectures. I co‑lead NSF‑funded research on scalable QLDPC decoding and mentor graduate researchers across software and FPGA implementation tracks.
+              I am an Assistant Research Professor in the Department of Electrical and Computer Engineering at the University of Arizona. My work spans quantum error correction and fault-tolerant quantum computation, with contributions to trapping-set analysis in (Q)LDPC codes, soft-syndrome and flipping decoders, and hardware-aware low-latency architectures. I co-lead NSF-funded research on scalable QLDPC decoding and mentor graduate researchers across software and FPGA implementation tracks.
             </p>
           </div>
         </div>
@@ -162,7 +161,7 @@
             <span class="tag">Quantum error correction</span>
             <span class="tag">Quantum LDPC codes</span>
             <span class="tag">Iterative decoding</span>
-            <span class="tag">Fault‑tolerant computing</span>
+            <span class="tag">Fault-tolerant computing</span>
             <span class="tag">Trapping sets</span>
             <span class="tag">Quantum networking</span>
           </div>
@@ -179,10 +178,10 @@
             <h3>Interests</h3>
             <ul>
               <li>Quantum error correction codes and relations with classical error correction</li>
-              <li>Fault‑tolerant quantum computing systems</li>
+              <li>Fault-tolerant quantum computing systems</li>
               <li>Iterative decoding algorithms and their optimization</li>
               <li>Trapping sets analysis in classical and quantum LDPC codes</li>
-              <li>Learning‑based inference for quantum systems</li>
+              <li>Learning-based inference for quantum systems</li>
               <li>Quantum communication & networking protocols</li>
             </ul>
           </div>
@@ -191,10 +190,10 @@
           <div class="card">
             <h3>Recent News</h3>
             <ul class="news">
-              <li><span class="dot"></span>Co‑PI on NSF CISE‑CCF grant #2420424 (2024–2027): scalable quantum LDPC decoders.</li>
-              <li><span class="dot"></span>Nature Physics paper on constant‑overhead fault‑tolerant quantum computation with atom arrays (2024).</li>
-              <li><span class="dot"></span>Best Paper Award at IEEE QCE 2024 for non‑binary hypergraph‑product codes (qudit QEC).</li>
-              <li><span class="dot"></span>Ph.D. student work on collective bit‑flipping/Min‑Sum decoding accepted to IEEE TCOMM/ISIT.</li>
+              <li><span class="dot"></span>Co-PI on NSF CISE-CCF grant #2420424 (2024-2027): scalable quantum LDPC decoders.</li>
+              <li><span class="dot"></span>Nature Physics paper on constant-overhead fault-tolerant quantum computation with atom arrays (2024).</li>
+              <li><span class="dot"></span>Best Paper Award at IEEE QCE 2024 for non-binary hypergraph-product codes (qudit QEC).</li>
+              <li><span class="dot"></span>Ph.D. student work on collective bit-flipping/Min-Sum decoding accepted to IEEE TCOMM/ISIT.</li>
             </ul>
           </div>
         </div>
@@ -207,23 +206,23 @@
       <div class="card">
         <h3>Journals</h3>
         <ul class="pub">
-          <li><strong>Constant‑overhead fault‑tolerant quantum computation with reconfigurable atom arrays</strong> — <em>Nature Physics</em>, 2024. (Q. Xu, J. P. Bonilla Ataides, C. A. Pattison, <u>N. Raveendran</u>, D. Bluvstein, J. Wurtz, B. Vasić, M. D. Lukin, L. Jiang, H. Zhou)</li>
-          <li><strong>Soft‑syndrome iterative decoding of quantum LDPC codes and hardware architectures</strong> — <em>EPJ Quantum Technology</em> 10:45, 2023. (J. Valls, A. Pradhan, N. Rengaswamy, F. Garcia‑Herrero, <u>N. R.</u>, B. Vasić)</li>
+          <li><strong>Constant-overhead fault-tolerant quantum computation with reconfigurable atom arrays</strong> — <em>Nature Physics</em>, 2024. (Q. Xu, J. P. Bonilla Ataides, C. A. Pattison, <u>N. Raveendran</u>, D. Bluvstein, J. Wurtz, B. Vasić, M. D. Lukin, L. Jiang, H. Zhou)</li>
+          <li><strong>Soft-syndrome iterative decoding of quantum LDPC codes and hardware architectures</strong> — <em>EPJ Quantum Technology</em> 10:45, 2023. (J. Valls, A. Pradhan, N. Rengaswamy, F. Garcia-Herrero, <u>N. R.</u>, B. Vasić)</li>
           <li><strong>Trapping Sets of Quantum LDPC Codes</strong> — <em>Quantum</em> 5:562, 2021. (<u>N. R.</u>, B. Vasić)</li>
           <li><strong>Entanglement purification with quantum LDPC codes and iterative decoding</strong> — <em>Quantum</em>, 2024. (N. Rengaswamy, <u>N. R.</u>, A. Raina, B. Vasić)</li>
-          <li><strong>A Sub‑Graph Expansion‑Contraction Method for Error Floor Computation</strong> — <em>IEEE Transactions on Communications</em> 68(7):3894–3995, 2020. (<u>N. R.</u>, D. Declercq, B. Vasić)</li>
+          <li><strong>A Sub-Graph Expansion-Contraction Method for Error Floor Computation</strong> — <em>IEEE Transactions on Communications</em> 68(7):3894–3995, 2020. (<u>N. R.</u>, D. Declercq, B. Vasić)</li>
         </ul>
         <h3>Conferences</h3>
         <ul class="pub">
-          <li><strong>Non‑Binary Hypergraph‑Product Codes for Qudit Error Correction</strong> — <em>IEEE QCE</em> 2024 (Best Paper). (S. K. Borah, A. K. Pradhan, <u>N. R.</u>, N. Rengaswamy, B. Vasić)</li>
-          <li><strong>Quaternary‑binary message‑passing decoder for quantum LDPC codes</strong> — <em>IEEE Globecom</em> 2023. (D. Chytas, <u>N. R.</u>, A. Pradhan, B. Vasić)</li>
-          <li><strong>Low‑latency flipping decoders for improving error floor performance in quantum LDPC codes</strong> — <em>ISTC</em> 2023. (<u>N. R.</u>, et al.)</li>
+          <li><strong>Non-Binary Hypergraph-Product Codes for Qudit Error Correction</strong> — <em>IEEE QCE</em> 2024 (Best Paper). (S. K. Borah, A. K. Pradhan, <u>N. R.</u>, N. Rengaswamy, B. Vasić)</li>
+          <li><strong>Quaternary-binary message-passing decoder for quantum LDPC codes</strong> — <em>IEEE Globecom</em> 2023. (D. Chytas, <u>N. R.</u>, A. Pradhan, B. Vasić)</li>
+          <li><strong>Low-latency flipping decoders for improving error floor performance in quantum LDPC codes</strong> — <em>ISTC</em> 2023. (<u>N. R.</u>, et al.)</li>
           <li><strong>FAID diversity via neural networks</strong> — <em>ISTC</em> 2021. (X. Xiao, <u>N. R.</u>, B. Vasić, S. Lin, R. Tandon)</li>
           <li><strong>Generalized Belief Propagation Decoding for Quantum LDPC Codes</strong> — <em>ICC</em> 2019. (<u>N. R.</u>, M. Bahrami, B. Vasić)</li>
         </ul>
-        <h3>Preprints & In‑press</h3>
+        <h3>Preprints & In-press</h3>
         <ul class="pub">
-          <li><strong>Collective bit‑flipping‑based decoding of quantum LDPC codes</strong> — <em>IEEE Transactions on Communications</em>, accepted 2024; arXiv:2406.17070. (D. Chytas, <u>N. R.</u>, B. Vasić)</li>
+          <li><strong>Collective bit-flipping-based decoding of quantum LDPC codes</strong> — <em>IEEE Transactions on Communications</em>, accepted 2024; arXiv:2406.17070. (D. Chytas, <u>N. R.</u>, B. Vasić)</li>
         </ul>
         <p class="muted">Full list and bibtex on <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
       </div>
@@ -258,7 +257,7 @@
           <div class="col-12"><textarea aria-label="Message" name="message" required placeholder="Message" rows="5" style="width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:#0b1220;color:var(--text)"></textarea></div>
           <div class="col-12"><button class="btn" type="submit">Send</button></div>
         </form>
-        <p class="muted" style="margin-top:10px">Also on <a href="https://github.com/nithinitzme" target="_blank" rel="noopener">GitHub</a> • <a href="#" id="emailLink">Email</a> • <a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></p>
+        <p class="muted" style="margin-top:10px">Also on <a href="https://github.com/nithinitzme" target="_blank" rel="noopener">GitHub</a> • <a href="#" id="emailLink">Email</a> • <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener">Google Scholar</a></p>
       </div>
     </section>
   </main>
@@ -288,6 +287,22 @@
     const EMAIL = 'nithin@arizona.edu';
     const link = document.getElementById('emailLink');
     if(EMAIL && link){ link.href = `mailto:${EMAIL}`; link.textContent = EMAIL; }
+
+    // Check if CV file exists and show tooltip if missing
+    const cvLink = document.getElementById('cvLink');
+    if (cvLink) {
+      fetch(cvLink.href, { method: 'HEAD' })
+        .then(response => {
+          if (!response.ok) {
+            cvLink.title = "CV file not found. Please check back later.";
+            cvLink.style.opacity = "0.6";
+          }
+        })
+        .catch(() => {
+          cvLink.title = "CV file not found. Please check back later.";
+          cvLink.style.opacity = "0.6";
+        });
+    }
   </script>
 
   <!-- Structured data -->
@@ -306,7 +321,7 @@
     ],
     "sameAs": [
       "https://github.com/nithinitzme",
-      "https://scholar.google.com"
+      "https://scholar.google.com/citations?user=FBrIdeAAAAAJ"
     ]
   }
   </script>
