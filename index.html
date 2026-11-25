@@ -1,529 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nithin Raveendran — Quantum Computing Researcher</title>
-  <meta name="description" content="Assistant Research Professor at the University of Arizona. Quantum error correction, quantum LDPC codes, iterative decoding.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Nithin Raveendran, PhD | Quantum Error Correction Research</title>
+  <meta name="description" content="Nithin Raveendran researches quantum LDPC codes, fault-tolerant quantum error correction, low-latency decoders, logical operations and distributed quantum computing.">
   <meta name="author" content="Nithin Raveendran">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Nithin Raveendran — Quantum Computing Researcher" />
-  <meta property="og:description" content="Quantum error correction • Quantum LDPC codes • Iterative decoding" />
-  <meta property="og:image" content="/assets/og-image.png" />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b1020" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="assets/style.css">
-
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://nithinitzme.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Nithin Raveendran | Quantum Error Correction">
+  <meta property="og:description" content="Quantum LDPC codes, fault-tolerant decoding, logical operations and distributed quantum computing.">
+  <meta property="og:image" content="https://nithinitzme.github.io/assets/nithin.jpg">
+  <link rel="stylesheet" href="assets/site-2026.css">
 </head>
-
 <body>
-  <!-- ===== HEADER ===== -->
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
-    <div class="container">
-      <nav class="navbar">
-        <a href="#hero" class="brand" id="brandLink">
-          <span class="qubit" aria-hidden="true" title="QLDPC motif">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <g fill="none" stroke="white" stroke-width="1.2" opacity=".9" stroke-linecap="round">
-                <circle cx="6" cy="6" r="2"/>
-                <circle cx="18" cy="6" r="2"/>
-                <circle cx="6" cy="18" r="2"/>
-                <circle cx="18" cy="18" r="2"/>
-                <rect x="10.5" y="10.5" width="3" height="3" rx="0.6"/>
-                <path d="M8 6h8M6 8v8M18 8v8M8 18h8" opacity=".7"/>
-              </g>
-            </svg>
-          </span>
-          <span>Nithin Raveendran</span>
-        </a>
-
-        <div class="navlinks" id="navlinks">
-          <a href="#about">About</a>
-          <a href="#research">Research</a>
-          <a href="#publications">Publications</a>
-          <a href="#talks">Talks</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#contact">Contact</a>
-          <a href="assets/nithin_cv.pdf" target="_blank" rel="noopener" class="btn">CV</a>
-        </div>
-
-        <div class="nav-actions">
-          <button id="themeToggle" class="btn small" aria-label="Toggle theme">🌙</button>
-          <button class="btn menu" id="menuBtn" aria-label="Toggle Menu">☰</button>
-        </div>
+    <div class="wrap nav">
+      <a class="wordmark" href="#top">Nithin Raveendran<span class="wordmark-dot">.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#talks">Talks</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-resume" href="resume.html">Resume</a>
       </nav>
     </div>
   </header>
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <p class="eyebrow">QUANTUM ERROR CORRECTION · CODING THEORY · FAULT TOLERANCE</p>
+        <h1 id="hero-title">Making quantum error correction work in practice.</h1>
+        <p class="intro">I'm Nithin Raveendran, a quantum error correction researcher working on quantum LDPC codes, iterative decoding, and fault-tolerant computing. My work moves between mathematical structure, decoder failure modes, circuit-level noise, and the constraints of real hardware.</p>
+        <p class="affiliation">Assistant Research Professor, University of Arizona <span aria-hidden="true">·</span> Co-Founder, QEC Labs</p>
+        <div class="hero-links">
+          <a class="primary-link" href="resume.html">View resume <span aria-hidden="true">↗</span></a>
+          <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+          <a href="https://github.com/nithinitzme" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="portrait-wrap"><img class="portrait" src="assets/nithin.jpg" alt="Portrait of Nithin Raveendran" width="520" height="520"><p class="portrait-note">Tucson, Arizona</p></div>
+    </section>
 
-  <!-- ===== MAIN CONTENT ===== -->
-  <main class="container">
-
-    <!-- === HERO === -->
-    <section id="hero" class="fade-in">
-      <div class="hero-wrap">
-        <img class="headshot" src="assets/nithin.jpg" alt="Portrait of Nithin Raveendran"/>
-        <div>
-          <span class="pill mono">
-            <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/nithin-raveendran" target="_blank">Assistant Research Professor</a> • 
-            <a href="https://www.arizona.edu/" target="_blank">University of Arizona</a> • Quantum Error Correction
-          </span>
-          <h1>Quantum computing researcher building better <span class="mono">QLDPC</span> codes and decoders.</h1>
-          <p class="lede">I focus on quantum error correction, with an emphasis on improved quantum LDPC codes and iterative decoders for fault-tolerant quantum computing.</p>
-          <p class="muted">Based in Tucson, AZ • Open to collaborations in QEC, coding theory, and fault tolerance. 
-            <a href="https://www.linkedin.com/in/nithin-raveendran-0b00a116/" target="_blank">LinkedIn →</a> 
-            <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank">Google Scholar →</a>
-          </p>
+    <section class="section section-tinted" id="about" aria-labelledby="about-title">
+      <div class="wrap split-heading">
+        <div><p class="eyebrow">01 / BACKGROUND</p><h2 id="about-title">About</h2></div>
+        <div class="measure">
+          <p>I am an Assistant Research Professor in Electrical and Computer Engineering at the University of Arizona, where I co-lead NSF-supported work on scalable quantum LDPC code and decoder design (CCF-2420424). I earned my PhD in 2021 studying trapping sets of iterative decoders for quantum and classical LDPC codes.</p>
+          <p>My research spans theoretical coding questions and implementation: why practical decoders fail, how to exploit quantum-code structure, and how to design algorithms with realistic timing and noise models. I also co-founded QEC Labs in 2025 to explore the engineering and commercialization of hardware-aware QEC decoding.</p>
         </div>
       </div>
     </section>
 
-    <!-- === ABOUT === -->
-    <section id="about" class="fade-in">
-      <h2>About</h2>
-      <div class="card">
-        <ul>
-          <li><a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/nithin-raveendran" target="_blank">Assistant Research Professor</a> in Electrical and Computer Engineering, University of Arizona.</li>
-          <li>Co-leads NSF-funded research on scalable Quantum LDPC codes and decoders.</li>
-          <li>Mentors graduate, undergraduate and high-school researchers in quantum error correction theory and software.</li>
-          <li>
-            Core Research Areas:
-            <ul>
-              <li>Fault-tolerant quantum computation (<a href="https://www.nature.com/articles/s41567-024-02479-z" target="_blank">Constant-overhead with QLDPC codes and reconfigurable neutral atoms</a>)</li>
-              <li>Trapping-set analysis in Quantum LDPC codes (<a href="https://quantum-journal.org/papers/q-2021-10-14-562/" target="_blank">Pioneering study to improve iterative decoders</a>)</li>
-              <li>Soft-syndrome iterative decoders (<a href="https://epjquantumtechnology.springeropen.com/articles/10.1140/epjqt/s40507-023-00201-1" target="_blank">Soft syndrome decoders</a>)</li>
-              <li>Hardware-aware low-latency architectures (<a href="https://arxiv.org/abs/2406.17070" target="_blank">Low-complexity Decoders</a>)</li>
-            </ul>
-          </li>
-        </ul>
+    <section class="section wrap" id="research" aria-labelledby="research-title">
+      <div class="section-header"><div><p class="eyebrow">02 / RESEARCH</p><h2 id="research-title">Current directions</h2></div><p class="section-aside">From code structure to reliable logical computation.</p></div>
+      <div class="research-grid">
+        <article class="research-item">
+          <p class="research-no">01</p><h3>Quantum LDPC codes &amp; iterative decoding</h3>
+          <p>Hypergraph-product, lifted-product, and bivariate-bicycle codes; belief propagation, min-sum, soft-syndrome and low-complexity iterative methods; trapping sets and error floors.</p>
+        </article>
+        <article class="research-item">
+          <p class="research-no">02</p><h3>Fault-tolerant and hardware-aware decoding</h3>
+          <p>Circuit-level noise, repeated syndrome extraction, detector error models, hook errors, finite-precision implementations, and low-latency architectures suited to FPGA development.</p>
+        </article>
+        <article class="research-item">
+          <p class="research-no">03</p><h3>QLDPC logical operations <span class="status">ongoing</span></h3>
+          <p>Fault-tolerant logical Pauli measurements, operator structure, ancilla-assisted measurement gadgets, and circuit-level analysis for QLDPC code families.</p>
+        </article>
+        <article class="research-item">
+          <p class="research-no">04</p><h3>Quantum networking &amp; distributed computing <span class="status">ongoing</span></h3>
+          <p>Entanglement-assisted operations across quantum processors, Bell-pair resources, inter-QPU faults, and decoding across repeated QEC rounds; building on published entanglement-purification research.</p>
+        </article>
       </div>
-
-      <div class="tags">
-        <a class="tag" href="https://arxiv.org/pdf/quant-ph/9512032" target="_blank">Quantum error correction</a>
-        <a class="tag" href="https://errorcorrectionzoo.org/list/qldpc" target="_blank">Quantum LDPC codes</a>
-        <a class="tag" href="https://www.itsoc.org/european-school-2013/program/01_esit_ohrid_2013_introduction_short_v10.pdf" target="_blank">Iterative decoding</a>
-        <a class="tag" href="https://arxiv.org/search/?query=fault-tolerant+quantum+computing&searchtype=all" target="_blank">Fault-tolerant computing</a>
-        <a class="tag" href="https://quantum-journal.org/papers/q-2021-10-14-562/" target="_blank">Trapping sets</a>
-        <a class="tag" href="https://cqn-erc.arizona.edu/" target="_blank">Quantum networking</a>
-        <a class="tag" href="https://errorcorrectionzoo.org/" target="_blank">Classical error correction</a>
-      </div>
+      <div class="research-note"><h3>Also exploring formal verification</h3><p>With Stavan Jain and Aws Albarghouthi, I coauthored <a href="https://arxiv.org/abs/2611.21236" target="_blank" rel="noopener noreferrer">Specifying &amp; Verifying Quantum Error-Correcting Codes</a> (2026), which introduces QECLean, a Lean-based framework for machine-checked QEC-code properties.</p></div>
     </section>
-    
-<!-- === RESEARCH === -->
-    <section id="research" class="fade-in">
-      <h2>Research</h2>
 
-      <!-- Single Card: Interests -->
-
-      <!-- Single Card: Interests
-      <div class="card">
-        <h3>Interests</h3>
-        <ul class="news">
-          <li><span class="dot"></span>Quantum error correction codes and relations with classical error correction</li>
-          <li><span class="dot"></span>Fault-tolerant quantum computing systems</li>
-          <li><span class="dot"></span>Iterative decoding algorithms and their optimization</li>
-          <li><span class="dot"></span>Trapping sets analysis in classical and quantum LDPC codes</li>
-          <li><span class="dot"></span>Learning-based inference for quantum systems</li>
-          <li><span class="dot"></span>Quantum communication & networking protocols</li>
-        </ul>
-      </div>
-      -->
-    <!-- === RESEARCH VIDEO === -->
-      <div class="card" style="text-align:center;">
-        <video 
-          autoplay 
-          muted 
-          loop 
-          playsinline 
-          width="100%" 
-          poster="assets/QuantumCircle.png" 
-          preload="auto" 
-          class="gif-video">
-          <source src="assets/FuturisticWaveSpinCaptions.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="muted" style="margin-top:10px;">
-          Fault-tolerant quantum computing, communication and networking systems • Quantum error correction • Relations with classical error correction • Quantum Low-Density Parity Check codes & decoders • Iterative decoders • Trapping sets analysis
-        </p>
+    <section class="section section-tinted" id="publications" aria-labelledby="pub-title">
+      <div class="wrap">
+        <div class="section-header"><div><p class="eyebrow">03 / SELECTED WORK</p><h2 id="pub-title">Publications</h2></div><a class="section-more" href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank" rel="noopener noreferrer">Complete publication list ↗</a></div>
+        <h3 class="pub-group">2026 &amp; recent work</h3>
+        <ol class="publication-list">
+          <li><span class="pub-year">2026</span><div><a href="https://arxiv.org/abs/2611.21236" target="_blank" rel="noopener noreferrer">Specifying &amp; Verifying Quantum Error-Correcting Codes</a><p>Stavan Jain, <strong>Nithin Raveendran</strong>, Aws Albarghouthi <span class="pub-venue">· arXiv preprint</span></p></div></li>
+          <li><span class="pub-year">2026</span><div><a href="https://arxiv.org/abs/2608.31040" target="_blank" rel="noopener noreferrer">Fast Fault-Tolerant Decoders for Hypergraph Product and Lifted-Product Codes</a><p>Asit K. Pradhan, <strong>Nithin Raveendran</strong>, David Declercq, Bane Vasić <span class="pub-venue">· arXiv preprint</span></p></div></li>
+          <li><span class="pub-year">2026</span><div><a href="https://doi.org/10.1109/TIT.2026.3687799" target="_blank" rel="noopener noreferrer">Linear Time Iterative Decoders for Hypergraph-Product and Lifted-Product Codes</a><p>Asit K. Pradhan, <strong>Nithin Raveendran</strong>, Narayanan Rengaswamy, Bane Vasić <span class="pub-venue">· IEEE Transactions on Information Theory</span></p></div></li>
+          <li><span class="pub-year">2026</span><div><a href="https://arxiv.org/abs/2608.11516" target="_blank" rel="noopener noreferrer">Trapping Sets of Detector Error Models</a><p>Marco Pacenti, <strong>Nithin Raveendran</strong>, Bane Vasić <span class="pub-venue">· arXiv preprint</span></p></div></li>
+          <li><span class="pub-year">2026</span><div><span class="paper-title">On the Minimum Distances of Finite-Length Lifted Product Quantum LDPC Codes</span><p><strong>Nithin Raveendran</strong>, David Declercq, Bane Vasić <span class="pub-venue">· IEEE ICC</span></p></div></li>
+          <li><span class="pub-year">2025</span><div><a href="https://github.com/satvikmaurya/decoder-bench" target="_blank" rel="noopener noreferrer">decoder-bench: A Comprehensive Benchmarking Suite for Quantum Error Correction Decoders</a><p>Satvik Maurya et al., including <strong>Nithin Raveendran</strong> <span class="pub-venue">· IEEE IISWC</span></p></div></li>
+          <li><span class="pub-year">2025</span><div><a href="https://doi.org/10.1109/TCOMM.2025.3535897" target="_blank" rel="noopener noreferrer">Collective Bit Flipping-Based Decoding of Quantum LDPC Codes</a><p>Dimitris Chytas, <strong>Nithin Raveendran</strong>, Bane Vasić <span class="pub-venue">· IEEE Transactions on Communications</span></p></div></li>
+        </ol>
+        <h3 class="pub-group pub-group-later">Selected earlier work</h3>
+        <ol class="publication-list">
+          <li><span class="pub-year">2024</span><div><a href="https://doi.org/10.1038/s41567-024-02479-z" target="_blank" rel="noopener noreferrer">Constant-overhead fault-tolerant quantum computation with reconfigurable atom arrays</a><p>Q. Xu et al., including <strong>Nithin Raveendran</strong> <span class="pub-venue">· Nature Physics</span></p></div></li>
+          <li><span class="pub-year">2024</span><div><a href="https://quantum-journal.org/papers/q-2024-01-24-1233/" target="_blank" rel="noopener noreferrer">Entanglement purification with quantum LDPC codes and iterative decoding</a><p>N. Rengaswamy, <strong>Nithin Raveendran</strong>, A. Raina, B. Vasić <span class="pub-venue">· Quantum</span></p></div></li>
+          <li><span class="pub-year">2023</span><div><a href="https://doi.org/10.1140/epjqt/s40507-023-00201-1" target="_blank" rel="noopener noreferrer">Soft syndrome iterative decoding of quantum LDPC codes and hardware architectures</a><p><strong>Nithin Raveendran</strong> et al. <span class="pub-venue">· EPJ Quantum Technology</span></p></div></li>
+          <li><span class="pub-year">2022</span><div><a href="https://doi.org/10.22331/q-2022-07-20-767" target="_blank" rel="noopener noreferrer">Finite rate QLDPC-GKP coding scheme that surpasses the CSS Hamming bound</a><p><strong>Nithin Raveendran</strong> et al. <span class="pub-venue">· Quantum</span></p></div></li>
+          <li><span class="pub-year">2021</span><div><a href="https://doi.org/10.22331/q-2021-10-14-562" target="_blank" rel="noopener noreferrer">Trapping Sets of Quantum LDPC Codes</a><p><strong>Nithin Raveendran</strong>, Bane Vasić <span class="pub-venue">· Quantum</span></p></div></li>
+        </ol>
       </div>
     </section>
 
-    <!-- Recent News -->
-      <div class="card">
-        <h3>Recent News</h3>
-        <ul class="news">
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://error-correction-lab.github.io/QECWorkshop2025/" target="_blank" rel="noopener" class="news-title">
-                Scalable QEC workshop (2025)
-              </a>
-              <p class="news-desc">Organizing and serving as session chair at IEEE QCE 2025 (Albuquerque, NM).</p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://doi.org/10.1038/s41567-024-02479-z" target="_blank" rel="noopener" class="news-title">
-                Nature Physics paper
-              </a>
-              <p class="news-desc">Constant-overhead fault-tolerant quantum computation with reconfigurable atom arrays (2024).</p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=2420424" target="_blank" rel="noopener" class="news-title">
-                NSF CISE-CCF grant #2420424
-              </a>
-              <p class="news-desc">Co-PI on scalable quantum LDPC codes and decoders for fault-tolerant quantum computing.</p>
-            </div>
-          </li>
-        </ul>
+    <section class="section wrap" id="experience" aria-labelledby="exp-title">
+      <div class="section-header"><div><p class="eyebrow">04 / EXPERIENCE</p><h2 id="exp-title">Research &amp; leadership</h2></div></div>
+      <div class="timeline">
+        <article><div class="time">Dec 2022–present</div><div><h3>Assistant Research Professor <span>· University of Arizona</span></h3><p>Research on QLDPC code construction, efficient decoding, error floors, and hardware-aware fault tolerance. Co-PI, NSF CCF-2420424; graduate research mentorship and cross-institution collaborations.</p></div></article>
+        <article><div class="time">Oct 2025–present</div><div><h3>Co-Founder &amp; CEO (part-time) <span>· QEC Labs</span></h3><p>Exploring how QLDPC decoding research translates into reproducible benchmarks, FPGA-oriented architectures, and the system constraints encountered by quantum-computing teams.</p></div></article>
+        <article><div class="time">Dec 2021–Dec 2022</div><div><h3>Postdoctoral Research Associate <span>· University of Arizona</span></h3><p>Developed work on QLDPC–GKP concatenated coding, soft information, and quantum decoding under noisy measurements.</p></div></article>
+        <article><div class="time">2015–2021</div><div><h3>PhD Researcher <span>· University of Arizona</span></h3><p>Studied trapping sets, belief propagation and error-floor estimation in quantum and classical LDPC codes.</p></div></article>
       </div>
+      <div class="education"><strong>Education</strong><p>PhD, Electrical &amp; Computer Engineering, University of Arizona (2021) <span>·</span> MSc (Engg.), Indian Institute of Science (2015) <span>·</span> BE (Hons.), BITS Pilani (2011)</p></div>
     </section>
 
-<!-- === PUBLICATIONS === -->
-    <section id="publications" class="fade-in">
-      <h2>Publications</h2>
-
-      <!-- Journals -->
-      <div class="card">
-        <h3>Selected Journals</h3>
-        <ul class="news">
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://www.nature.com/articles/s41567-024-02479-z" target="_blank" class="news-title">
-                Constant-overhead fault-tolerant quantum computation with reconfigurable atom arrays
-              </a>
-              <p class="news-desc">
-                <em>Nature Physics</em>, 2024 — Demonstrates a scalable, constant-overhead approach to quantum computation using neutral atom arrays.
-                <br><small>(Q. Xu, J. P. Bonilla Ataides, C. A. Pattison, <u>N. Raveendran</u>, D. Bluvstein, J. Wurtz, B. Vasić, M. D. Lukin, L. Jiang, H. Zhou)</small>
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://epjquantumtechnology.springeropen.com/articles/10.1140/epjqt/s40507-023-00201-1" target="_blank" class="news-title">
-                Soft-syndrome iterative decoding of quantum LDPC codes and hardware architectures
-              </a>
-              <p class="news-desc">
-                <em>EPJ Quantum Technology</em> 10:45, 2023 — Introduces soft-syndrome decoders and hardware architectures for quantum LDPC codes.
-                <br><small>(<u>N. Raveendran</u>, J. Valls, A. Pradhan, N. Rengaswamy, F. Garcia-Herrero, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://quantum-journal.org/papers/q-2021-10-14-562/" target="_blank" class="news-title">
-                Trapping Sets of Quantum LDPC Codes
-              </a>
-              <p class="news-desc">
-                <em>Quantum</em> 5:562, 2021 — Foundational analysis on trapping sets in quantum LDPC codes to improve iterative decoding.
-                <br><small>(<u>N. Raveendran</u>, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://doi.org/10.22331/q-2022-07-20-767" target="_blank" class="news-title">
-                Finite-rate QLDPC-GKP coding scheme that surpasses the CSS Hamming bound
-              </a>
-              <p class="news-desc">
-                <em>Quantum</em> 6:767, 2022 — Introduces hybrid QLDPC-GKP codes that outperform traditional CSS bounds.
-                <br><small>(<u>N. Raveendran</u>, N. Rengaswamy, F. Rozpędek, A. Raina, L. Jiang, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://quantum-journal.org/papers/q-2024-01-24-1233/" target="_blank" class="news-title">
-                Entanglement purification with quantum LDPC codes and iterative decoding
-              </a>
-              <p class="news-desc">
-                <em>Quantum</em> 8:1233, 2024 — Presents entanglement purification using quantum LDPC codes and iterative decoders.
-                <br><small>(N. Rengaswamy, <u>N. Raveendran</u>, A. Raina, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://ieeexplore.ieee.org/document/9072180" target="_blank" class="news-title">
-                A Sub-Graph Expansion-Contraction Method for Error Floor Computation
-              </a>
-              <p class="news-desc">
-                <em>IEEE Transactions on Communications</em> 68(7):3894-3995, 2020 — Proposes a method for estimating LDPC code error floors via sub-graph expansion.
-                <br><small>(<u>N. Raveendran</u>, D. Declercq, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Conferences -->
-      <div class="card">
-        <h3>Selected Conferences</h3>
-        <ul class="news">
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://ieeexplore.ieee.org/document/10821254" target="_blank" class="news-title">
-                Non-Binary Hypergraph-Product Codes for Qudit Error Correction
-              </a>
-              <p class="news-desc">
-                <em>IEEE QCE</em> 2024 — Best Paper Award. Explores non-binary hypergraph-product codes for efficient qudit error correction.
-                <br><small>(S. K. Borah, A. K. Pradhan, <u>N. Raveendran</u>, N. Rengaswamy, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://ieeexplore.ieee.org/document/10273526" target="_blank" class="news-title">
-                Learning to decode trapping sets in QLDPC codes
-              </a>
-              <p class="news-desc">
-                <em>ISTC</em> 2023 — Demonstrates a neural network-based decoder for identifying trapping sets in QLDPC codes.
-                <br><small>(A. K. Pradhan, <u>N. Raveendran</u>, N. Rengaswamy, X. Xiao, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://ieeexplore.ieee.org/document/10436874" target="_blank" class="news-title">
-                Quaternary-binary message-passing decoder for quantum LDPC codes
-              </a>
-              <p class="news-desc">
-                <em>IEEE Globecom</em> 2023 — Introduces a message-passing decoder improving LDPC decoding convergence and accuracy.
-                <br><small>(D. Chytas, <u>N. Raveendran</u>, A. Pradhan, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://ieeexplore.ieee.org/document/10273490" target="_blank" class="news-title">
-                Turbo-XZ Algorithm: Low-Latency Decoders for Quantum LDPC Codes
-              </a>
-              <p class="news-desc">
-                <em>ISTC</em> 2023 — Proposes a low-latency flipping decoder in a turbo approach to enhance LDPC decoding performance.
-                <br><small>(<u>N. Raveendran</u>, E. Boutillon, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-
-      <!-- Preprints -->
-      <div class="card">
-        <h3>Preprints & In-press</h3>
-        <ul class="news">
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://arxiv.org/abs/2505.06385" target="_blank" class="news-title">
-                Fault Tolerant Decoding of QLDPC-GKP Codes with Circuit Level Soft Information
-              </a>
-              <p class="news-desc">
-                <em>IEEE QCE</em> 2025 — explores improving QEC by using soft, real-time information from inner GKP codes to enhance the performance of outer QLDPC codes under realistic, circuit-level noise. 
-                <br><small>(S. K. Borah, A. K. Pradhan, <u>N. Raveendran</u>, M. Pacenti, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://arxiv.org/abs/2406.17070" target="_blank" class="news-title">
-                Collective bit-flipping-based decoding of quantum LDPC codes
-              </a>
-              <p class="news-desc">
-                <em>IEEE Transactions on Communications</em> (in press) — A collective bit-flipping decoding framework for improved LDPC performance.
-                <br><small>(D. Chytas, <u>N. R.</u>, B. Vasić)</small>
-              </p>
-            </div>
-          </li>
-        </ul>
-        <p class="muted">
-          Full list and BibTeX on <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank">Google Scholar</a>.
-        </p>
-      </div>
-    </section>
-
-    <!-- === TALKS === -->
-    <section id="talks" class="fade-in">
-      <h2>Talks</h2>
-      <div class="card">
-        <ul class="news">
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="https://ieee-qce.org/" target="_blank" class="news-title">
-                WKS18 - Quantum Error Correction: Pathways to Scalability
-              </a>
-              <p class="news-desc">
-                Organizer and Chair, <em>IEEE Quantum Week (QCE)</em> 2025 — Workshop on scalable QLDPC and reconfigurable fault-tolerant architectures.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="#" class="news-title">
-                Fault-Tolerant Decoding of QLDPC-GKP Codes with Circuit-Level Soft Information
-              </a>
-              <p class="news-desc">
-                Contributed talk, <em>IEEE Quantum Week (QCE)</em> 2025 — Discussed circuit-level soft decoding for QLDPC–GKP codes.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="#" class="news-title">
-                On the Minimum Distance of Lifted Product LDPC Codes
-              </a>
-              <p class="news-desc">
-                Invited workshop talk, <em>ITA 2025</em> (San Diego, CA) — Analysis of LDPC minimum distances for scalable classical/quantum codes.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="#" class="news-title">
-                Low-complexity and low-latency decoding of quantum LDPC codes
-              </a>
-              <p class="news-desc">
-                Invited talk, <em>ITA 2025</em> — Presented lightweight architectures for fast LDPC decoding.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="#" class="news-title">
-                Quantum Trapping Sets and Their Impact on QLDPC Decoding
-              </a>
-              <p class="news-desc">
-                Invited + panel session, <em>QUIK Workshop</em>, Athens, 2024 — Discussion on trapping sets and decoding behavior in QLDPC codes.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <span class="dot"></span>
-            <div class="news-content">
-              <a href="#" class="news-title">
-                Concatenated QLDPC Codes and Decoders
-              </a>
-              <p class="news-desc">
-                Invited workshop talk, <em>ITA 2024</em> (San Diego, CA) — Introduced hybrid concatenated QLDPC frameworks for efficient decoding.
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-<!-- === TEACHING === -->
- <!-- === TEACHING === -->
-<section id="teaching" class="fade-in">
-  <h2>Teaching</h2>
-  <div class="card">
-    <ul class="news">
-
-      <li>
-        <span class="dot"></span>
-        <div class="news-content">
-          <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/nithin-raveendran" target="_blank" class="news-title">
-            Digital Communication I
-          </a>
-          <p class="news-desc">
-            Undergraduate / Graduate-level course introducing the principles of digital communication, including signal space concepts, modulation techniques, and performance over noisy channels.
-          </p>
+    <section class="section section-tinted" id="talks" aria-labelledby="talks-title">
+      <div class="wrap split-heading">
+        <div><p class="eyebrow">05 / COMMUNITY</p><h2 id="talks-title">Talks &amp; service</h2></div>
+        <div class="measure">
+          <p><strong>IEEE Quantum Week 2026</strong> — QLDPC workshop co-organization and a tutorial on quantum error correction.</p>
+          <p><strong>IEEE Quantum Week 2025</strong> — Workshop organizing and session chair on paths to scalable QEC.</p>
+          <p><strong>IEEE Quantum Week 2024</strong> — Coauthor of a Best Paper Award winner (Quantum Algorithms Track), on non-binary hypergraph-product codes for qudit error correction.</p>
+          <p>Invited speaking and tutorial participation at ITA, IEEE QCE, and quantum information research workshops; peer reviewer for quantum and IEEE journals.</p>
         </div>
-      </li>
-
-      <li>
-        <span class="dot"></span>
-        <div class="news-content">
-          <a href="https://ece.engineering.arizona.edu/faculty-staff/faculty/nithin-raveendran" target="_blank" class="news-title">
-            Digital Communication II
-          </a>
-          <p class="news-desc">
-            Continuation of Digital Communication I focusing on error control coding, information theory foundations, and modern iterative decoding algorithms applied to classical and quantum systems.
-          </p>
-        </div>
-      </li>
-
-      <li>
-        <span class="dot"></span>
-        <div class="news-content">
-          <a href="https://cqn-erc.arizona.edu/" target="_blank" class="news-title">
-          Quantum Error Correction and Fault-Tolerant Computing
-          </a>
-          <p class="news-desc">
-            Graduate seminar exploring stabilizer formalism, LDPC and surface codes, and fault-tolerant quantum architectures.  
-            Integrates current research directions in quantum communication and hardware-aware decoding.
-          </p>
-        </div>
-      </li>
-
-    </ul>
-  </div>
-</section>
-
-    <!-- === CONTACT === -->
-    <section id="contact" class="fade-in">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email at <a href="mailto:nithin@arizona.edu">nithin@arizona.edu</a> or connect on <a href="https://www.linkedin.com/in/nithin-raveendran-0b00a116/" target="_blank">LinkedIn</a>.</p>
-        <p class="muted">Also on <a href="https://github.com/nithinitzme" target="_blank">GitHub</a> • <a href="https://scholar.google.com/citations?user=FBrIdeAAAAAJ" target="_blank">Google Scholar</a></p>
       </div>
+    </section>
+
+    <section class="section wrap contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">06 / GET IN TOUCH</p><h2 id="contact-title">Research is collaborative.</h2>
+      <p>I'm interested in conversations about quantum error correction, fault-tolerant architectures, quantum networking, and research roles that connect algorithms with implementation.</p>
+      <div class="contact-links"><a href="mailto:nithinitzme@gmail.com">nithinitzme@gmail.com ↗</a><a href="https://www.linkedin.com/in/nithin-raveendran-0b00a116/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="resume.html">Resume ↗</a></div>
     </section>
   </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="site-footer">
-    <div class="container">
-      <span>© <span id="year"></span> Nithin Raveendran</span>
-      <span class="muted">Built with ❤️ and GitHub Pages</span>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="assets/script.js"></script>
+  <footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> Nithin Raveendran</span><span>Research · Teaching · Quantum Error Correction</span></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
