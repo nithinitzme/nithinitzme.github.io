@@ -5,6 +5,7 @@ The public research homepage at [nithinitzme.github.io](https://nithinitzme.gith
 ## Files
 
 - `index.html` — accessible, single-page research profile, including current research, publications, experience, talks and contact.
+- `speaking.html` — speaking topics, selected appearances, host bio, mentorship, news and field notes.
 - `resume.html` — ATS-readable research resume, with a **Print / Save as PDF** control for visitors.
 - `assets/site-2026.css` — new warm-neutral academic design; responsive for desktop/mobile.
 - `assets/nithin.jpg` — existing portrait reused.
@@ -30,3 +31,7 @@ Changes to the default `main` branch are published by GitHub Pages. Create a fea
 The site uses semantic HTML, a skip link, keyboard-visible focus styles, responsive layout, and reduced-motion support. The research portrait has alternative text. Please review on mobile and desktop whenever updating the layout.
 
 Content © Nithin Raveendran.
+
+## Speaking, mentorship and news
+
+Update `speaking.html` for new appearances and dated news. Distinguish invited talks from contributed talks and organizing roles. Add named mentorship outcomes only with confirmed details and permission to identify the student. Field notes are short standalone articles within `#notes`; add each article with a stable ID. Keep the latest news first.
