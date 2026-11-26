@@ -20,3 +20,5 @@ h1,h2,h3,p{margin-top:0}h1,h2{font-family:Georgia,"Times New Roman",serif;font-w
 @media(max-width:600px){.speaker-intro{grid-template-columns:1fr;padding-top:48px;padding-bottom:53px}.speaker-aside{display:none}.hero-degree{display:inline-block}.hero h1{font-size:38px}.name-degree{white-space:nowrap}}
 
 .mentorship-highlight{border-top:1px solid var(--line);padding-top:22px;margin-top:25px}.mentorship-highlight h3{font:normal 24px/1.35 Georgia,serif;color:var(--accent-dark);margin-bottom:12px}
+
+#research .section-header{flex-wrap:wrap}#research .section-aside{max-width:none}
